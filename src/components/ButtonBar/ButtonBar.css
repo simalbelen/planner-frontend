@@ -1,0 +1,10 @@
+.botonera{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.botonera > button{
+    margin: 10px
+}
