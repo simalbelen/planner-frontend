@@ -1,0 +1,11 @@
+.header{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: #f3f3f3;
+}
+  
+.body{
+    height:calc(100vh - 60px);
+    display: flex;
+}  

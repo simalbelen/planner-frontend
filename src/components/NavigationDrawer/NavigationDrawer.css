@@ -1,26 +1,64 @@
-.transparent-background{
-    display: block;
+.transparent-background {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    z-index: 1001;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
 }
+
+.transparent-background.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
 .drawer {
+    transform: translateX(-100%);
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px; /* Ancho del drawer, ajusta según tus necesidades */
+    width: 25%;
     height: 100%;
-    background-color: white; /* Fondo gris transparente */
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    background-color: white;
+    z-index: 1000;
+    transition: transform 0.3s ease;
 }
 
-.link{
-    padding: '8px 8px 8px 32px';
-    text-decoration: 'none';
-    font-size: '25px';
-    color: '#818181';
-    display: 'block';
-    transition: '0.3s';
-  };
+.transparent-background.active + .drawer {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.link {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.drawer-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.close-icon{
+    padding: 5px;
+    font-size: 1.5em;
+    align-self: flex-end;
+}
+
+.menu-link{
+    padding-left: 10%;
+    margin-bottom: 15px;
+    font-size: x-large;
+    color: black;
+}
