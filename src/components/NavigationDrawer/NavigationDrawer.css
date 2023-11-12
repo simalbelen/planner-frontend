@@ -1,0 +1,26 @@
+.transparent-background{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1001;
+}
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Ancho del drawer, ajusta según tus necesidades */
+    height: 100%;
+    background-color: white; /* Fondo gris transparente */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.link{
+    padding: '8px 8px 8px 32px';
+    text-decoration: 'none';
+    font-size: '25px';
+    color: '#818181';
+    display: 'block';
+    transition: '0.3s';
+  };

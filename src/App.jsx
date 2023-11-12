@@ -1,20 +1,25 @@
 import './App.css'
-import { useState } from 'react';
-import ButtonBar from './components/ButtonBar/ButtonBar'
-import Planner from "./components/Planner/Planner"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Home from "./pages/Home/Home"
+import NotFound from './pages/NotFound/NotFound';
 
 const App = () => {
-  const [planner, setPlanner] = useState(1) // 0 -> daily, 1 -> weekly, 2 -> monthly, 3 -> yearly
+  
     
     return (
-        <>
-            <div className="header">
-                <ButtonBar setPlanner={setPlanner}/>
-            </div>
-            <div className="body">
-                <Planner planner={planner}/>
-            </div>
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={ <Home /> } />
+                <Route path="/tasks" element={ <Home /> } />
+                <Route path="/events" element={ <Home /> } />
+
+                {/* Redirección a una ruta específica */}
+        <Route path="*" element={<Navigate to="/not-found" />} />
+
+        {/* Página 404 */}
+        <Route path="/not-found" element={<NotFound />} />
+            </Routes>
+        </BrowserRouter>
     )
 }
 

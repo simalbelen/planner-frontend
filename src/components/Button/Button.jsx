@@ -1,3 +1,4 @@
+import "./Button.css"
 const Button = ({text, setPlanner}) => {
     const changePlanner = () => {
         if (text === "Daily"){
@@ -10,7 +11,7 @@ const Button = ({text, setPlanner}) => {
             setPlanner(3)
         }
     }
-    return <button type="button" className="btn btn-primary" onClick={changePlanner}>{text}</button>
+    return <button className="btn" onClick={changePlanner}>{text}</button>
 }
 
 export default Button

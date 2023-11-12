@@ -16,7 +16,7 @@ const Planner = ({ planner }) => {
         }
         return <></>
     }
-    return <div>{getPlanner(planner)}</div>
+    return <>{getPlanner(planner)}</>
 }
 
 export default Planner
