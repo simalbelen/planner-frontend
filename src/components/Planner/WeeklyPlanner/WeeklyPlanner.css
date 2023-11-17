@@ -1,6 +1,7 @@
 .planner{
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 160px);
+    margin: 0px 5px;
     display: flex;
     justify-content: space-around;
     align-items:start;

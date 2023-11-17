@@ -1,0 +1,36 @@
+.planner-filters-bar{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+.arrow-icon{
+    font-size: 2em;
+}
+
+.type-selector{
+    width: 100%;
+    min-width: 150px;
+    min-height: 40px;
+}
+.centered-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-div {
+    margin-right: 20px;
+    position:fixed;
+    z-index: 998;
+    top: 60px;
+    right: 0;
+}
+
+.week-name{
+    padding: 0px 40px;
+    font-size: large;
+    font-weight: 500;
+}

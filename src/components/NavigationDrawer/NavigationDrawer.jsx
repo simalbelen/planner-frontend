@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { GrClose } from 'react-icons/gr'
 
 const NavigationDrawer = ({ isOpen, toggleOpen }) => {
+
     return (
         <>
             <div
@@ -25,7 +26,6 @@ const NavigationDrawer = ({ isOpen, toggleOpen }) => {
                         Events
                     </Link>
                 </div>
-                
             </div>
         </>
     )

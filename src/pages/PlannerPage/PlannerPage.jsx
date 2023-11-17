@@ -1,17 +1,15 @@
 
 import { useState } from 'react';
-import ButtonBar from '../../components/ButtonBar/ButtonBar'
+import PlannerFiltersBar from '../../components/PlannerFiltersBar/PlannerFiltersBar'
 import Planner from "../../components/Planner/Planner"
 import "./PlannerPage.css"
-import NavigationBar from '../../components/NavigationBar/NavigationBar';
 
 const PlannerPage = () => {
-    const [planner, setPlanner] = useState(1) // 0 -> daily, 1 -> weekly, 2 -> monthly, 3 -> yearly
+    const [planner, setPlanner] = useState(0) // 0 -> daily, 1 -> weekly, 2 -> monthly, 3 -> yearly
     return (
         <>
-            <NavigationBar title={"Planner"}/>
             <div className="header">
-                <ButtonBar setPlanner={setPlanner} />
+                <PlannerFiltersBar setPlanner={setPlanner} />
             </div>
             <div className="body">
                 <Planner planner={planner} />

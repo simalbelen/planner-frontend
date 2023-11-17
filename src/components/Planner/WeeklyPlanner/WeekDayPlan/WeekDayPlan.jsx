@@ -1,9 +1,8 @@
 import "./WeekDayPlan.css"
 const WeekDayPlan = ({weekDay}) => {
     return <div className="base">
-        <h2 className="weekDayName">{weekDay}</h2>
-        <br></br>
-        text
+        <span className="weekDayName">{weekDay}</span>
+        <span className="dayNumber">1</span>
     </div>
 }
 

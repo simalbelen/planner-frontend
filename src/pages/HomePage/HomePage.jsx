@@ -1,10 +1,9 @@
 import "./HomePage.css"
-import NavigationBar from '../../components/NavigationBar/NavigationBar';
 
 const HomePage = () => {
     return (
         <>
-            <NavigationBar title={"Home"}/>
+            <span>HOLA!</span>
         </>
     )
 }
